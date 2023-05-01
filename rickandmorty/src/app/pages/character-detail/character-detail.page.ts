@@ -17,6 +17,7 @@ export class CharacterDetailPage implements OnInit {
  //ADD CHARACTER DETAILS 
   characterId: String = '';
   character = null as any;
+c: any;
 
   constructor(
     private actRoute: ActivatedRoute,
