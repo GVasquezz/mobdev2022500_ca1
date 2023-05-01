@@ -8,10 +8,27 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content mode="ios" >
+<ion-content mode="ios">
 
-  <div class="glass-content ion-padding"> 
+     <div class="glass-content ion-padding">
+      
+      
+           <div class="ion-text-center ion-padding-top" *ngIf="character"> 
 
-  </div>
+
+             <ion-avatar>
+              <img [src]="character.image" />
+             </ion-avatar>
+         
+             <h1>{{character.name}}</h1>
+             <div>Status: {{character.status == 'Alive' ? 'Alive' : 'Dead'  }}</div>
+
+           </div>
+
+    
+    </div>
+
+        
+
   
 </ion-content>

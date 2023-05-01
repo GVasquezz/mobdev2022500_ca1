@@ -16,6 +16,7 @@ import { RickAndMortyService } from 'src/app/services/rick-and-morty.service';
 export class CharacterDetailPage implements OnInit {
  //ADD CHARACTER DETAILS 
   characterId: String = '';
+  character = null as any;
 
   constructor(
     private actRoute: ActivatedRoute,
@@ -42,6 +43,7 @@ export class CharacterDetailPage implements OnInit {
      next: (res: any) => {
            
       console.log(res);
+      this.character = res;
       
      },
      error: (error: any) => {
