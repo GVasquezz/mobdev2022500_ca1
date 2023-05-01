@@ -17,13 +17,22 @@
       <ion-card>
        <ion-grid>
         <ion-row>
+
           <ion-col size-lg="4" size-md="4" size-sm="4" size="12" >
+             <!-- ASIGN PROFILE PICTURES  OF EACH CHARACTER -->
           <ion-avatar> 
             <img [src]="c.image"/>
           </ion-avatar>
 
              </ion-col>
-          <ion-col size-lg="8" size-md="8" size-sm="8" size="12" ></ion-col>
+          <ion-col size-lg="8" size-md="8" size-sm="8" size="12" >
+
+                
+             <!-- ASIGN ORIGIN OF EACH CHARACTER -->
+            <div>{{c.name}}</div>
+            <p> Seen First time: <br> <strong>{{c.origin.name}}</strong> </p>
+            <p> Senn Last time: <br> <strong>{{c.location.name}}</strong> </p>
+          </ion-col>
         </ion-row>
        </ion-grid>
       </ion-card>
@@ -35,3 +44,4 @@
   
  </div>
 </ion-content>
+
