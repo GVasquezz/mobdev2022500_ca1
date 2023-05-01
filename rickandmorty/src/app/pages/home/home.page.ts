@@ -18,6 +18,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
  
 })
 export class HomePage implements OnInit {
+loadData($event: Event) {
+throw new Error('Method not implemented.');
+}
 
    
   characters: any[] = [];
@@ -43,14 +46,38 @@ getCharacters(event?: any){
           
       this.characters.push(...res.results)
       console.log(this.characters);
+
+      if(event) event.target.complete();
     },
    
     error: (error: any) => {
 
-    }
-   }
+      if(event) event.target.complete();
 
-   )
+    }
+   })
+
+}
+
+// METHOD SEARCH CHARACTERS BY NAME
+searchCharacters(){
+
+  this.params.page = 1;
+
+  this.rickAndMortySvc.getCharacters(this.params).subscribe({
+   
+   next: (res: any) => {
+         
+     this.characters = res.results
+     
+   },
+  
+   error: (error: any) => {
+
+    
+
+   }
+  })
 
 }
 
