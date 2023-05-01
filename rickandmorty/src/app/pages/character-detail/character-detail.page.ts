@@ -35,7 +35,7 @@ c: any;
 
 
 
-
+  // GET CHARACTERS 
   getCharacter(){
 
 
@@ -43,8 +43,9 @@ c: any;
      
      next: (res: any) => {
            
-      console.log(res);
+      
       this.character = res;
+      this.getEpisodes()
       
      },
      error: (error: any) => {
@@ -55,5 +56,34 @@ c: any;
     })
  
  }
+
+
+ // GET THE INFORMATION OF EACH EPISODE FOR THAT SPECIFIC CHARACTER
+ getEpisodes(){
+
+  for(let url of this.character.episode){
+
+
+      this.rickAndMortySvc.getByUrl(url).subscribe({
+   
+   next: (res: any) => {
+         
+ 
+    console.log(res);
+   },
+   error: (error: any) => {
+
+    
+
+   }
+  })
+
+}
+
+
+  } 
+
+ 
+
 
 }

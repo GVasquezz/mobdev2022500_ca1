@@ -21,4 +21,11 @@ export class RickAndMortyService {
 
 
   }
+
+  getByUrl(url: string){
+
+    return this.http.get(url)
+
+
+  }
 }
