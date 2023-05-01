@@ -1,0 +1,9 @@
+img {
+    padding-top: 30vh;
+    width: 100%;
+    max-width: 500px;
+}
+
+
+
+.scale-up-bottom{animation:scale-up-bottom 0.4s; } @keyframes scale-up-bottom{0%{transform:scale(.5);transform-origin:center bottom}100%{transform:scale(1);transform-origin:center bottom}}
