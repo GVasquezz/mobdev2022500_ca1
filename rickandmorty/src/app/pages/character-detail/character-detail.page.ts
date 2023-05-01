@@ -17,8 +17,7 @@ export class CharacterDetailPage implements OnInit {
  //ADD CHARACTER DETAILS 
   characterId: String = '';
   character = null as any;
-c: any;
-
+  episodes: any[] = [];
   constructor(
     private actRoute: ActivatedRoute,
     private rickAndMortySvc: RickAndMortyService
@@ -70,6 +69,7 @@ c: any;
          
  
     console.log(res);
+    this.episodes.push(res)
    },
    error: (error: any) => {
 
