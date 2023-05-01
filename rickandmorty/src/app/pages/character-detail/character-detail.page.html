@@ -10,9 +10,18 @@
 
 <ion-content mode="ios">
 
+
+<!-- LOADING CHARACTER -->
      <div class="glass-content ion-padding">
+
+      <div *ngIf="!character" class ="loader">
+
+        <ion-spinner name="crescent"> </ion-spinner>
+
+
+         </div>
       
-      
+      <!-- CHARACTER INFO -->
            <div class="ion-text-center ion-padding-top" *ngIf="character"> 
 
 
@@ -45,10 +54,15 @@
   <ion-row>
     <ion-col *ngFor="let e of episodes " size-lg = "4" size-md ="6 " size-ms="6" size="12"> 
 
+
+
+
+      <!--IT SHOWS THE NAME , EPISODES AND BROADCAST DATE-->
     <ion-card>
       <ion-card-content class="ion-test-start">
         <strong> {{e.name}} </strong>
         <p>{{e.episode}}</p>
+        <p> Broadcast date: {{e.air_date | date: 'dd/MM/YYYY'}} </p>
       </ion-card-content>
     </ion-card>
   </ion-col>
