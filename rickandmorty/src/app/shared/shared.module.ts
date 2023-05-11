@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [],
   exports: [
-
+       // WE MUST ADD A ROUTE MODULE LIBRARY IN ORDER TO USE IT IN OUR HTML HomePage
     RouterModule
 
   ],
