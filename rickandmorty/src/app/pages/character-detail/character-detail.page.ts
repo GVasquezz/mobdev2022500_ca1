@@ -6,6 +6,8 @@ import { ActivatedRoute } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RickAndMortyService } from 'src/app/services/rick-and-morty.service';
 
+
+//IMPORT SHARED MODULE AND RICK-AND-MORTY-SERVICE.
 @Component({
   selector: 'app-character-detail',
   templateUrl: './character-detail.page.html',
@@ -21,7 +23,7 @@ export class CharacterDetailPage implements OnInit {
   constructor(
     private actRoute: ActivatedRoute,
     private rickAndMortySvc: RickAndMortyService
-  ) { this.characterId= this.actRoute.snapshot.paramMap.get('id') as String
+  ) { this.characterId= this.actRoute.snapshot.paramMap.get('id') as String // OBTAINS THE ID 
   console.log(this.characterId);
 }
 

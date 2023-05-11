@@ -9,7 +9,7 @@ export class RickAndMortyService {
 
   constructor(private http: HttpClient) { }
   
-
+ // GET CHARACTERS BY ID 
   getCharacters(params:any){
     return this.http.get(environment.baseUrl + environment.character, {params})
 
